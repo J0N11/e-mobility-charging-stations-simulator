@@ -3,7 +3,9 @@ import type { JsonObject } from '../../JsonType.js'
 import type {
   BootReasonEnumType,
   InstallCertificateUseEnumType,
+  OCPP20ConnectorEnumType,
   OCPP20ConnectorStatusEnumType,
+  OCPP20IdTokenType,
 } from './Common.js'
 import type { OCPP20SetVariableDataType } from './Variables.js'
 
@@ -55,4 +57,13 @@ export interface OCPP20SetVariablesRequest extends JsonObject {
 export interface OCPP20InstallCertificateRequest extends JsonObject {
   certificateType: InstallCertificateUseEnumType
   certificate: string
+}
+
+export interface OCPP20ReserveNowRequest extends JsonObject {
+  id: number
+  expiryDateTime: Date
+  connectorType?: OCPP20ConnectorEnumType
+  evseId?: number
+  idToken: OCPP20IdTokenType
+  groupIdToken: OCPP20IdTokenType
 }

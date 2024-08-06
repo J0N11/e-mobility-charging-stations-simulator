@@ -4,6 +4,7 @@ import type { RegistrationStatusEnumType } from '../Common.js'
 import type {
   GenericStatusEnumType,
   InstallCertificateStatusEnumType,
+  OCPP20ReserveNowStatusEnumType,
   StatusInfoType,
 } from './Common.js'
 import type { OCPP20SetVariableResultType } from './Variables.js'
@@ -32,5 +33,10 @@ export interface OCPP20SetVariablesResponse extends JsonObject {
 
 export interface OCPP20InstallCertificateResponse extends JsonObject {
   status: InstallCertificateStatusEnumType
+  statusInfo?: StatusInfoType
+}
+
+export interface OCPP20ReserveNowResponse extends JsonObject {
+  status: OCPP20ReserveNowStatusEnumType
   statusInfo?: StatusInfoType
 }
