@@ -37,6 +37,50 @@ export enum OCPP20ConnectorStatusEnumType {
   Faulted = 'Faulted'
 }
 
+export enum OCPP20ConnectorEnumType {
+  cCCS1 = 'cCCS1',
+  cCCS2 = 'cCCS2',
+  cG105 = 'cG105',
+  cTesla = 'cTesla',
+  cType1 = 'cType1',
+  cType2 = 'cType2',
+  s3091p16a = 's309-1P-16A',
+  s3091p32a = 's309-1P-32A',
+  s3093p16a = 's309-3P-16A',
+  s3093p32a = 's309-3P-32A',
+  sBS1361 = 'sBS1361',
+  sCEE77 = 'sCEE-7-7',
+  sType2 = 'sType2',
+  sType3 = 'sType3',
+  Other1PhMax16A = 'Other1PhMax16A',
+  Other1PhOver16A = 'Other1PhOver16A',
+  Other3Ph = 'Other3Ph',
+  Pan = 'Pan',
+  wInductive = 'wInductive',
+  wResonant = 'wResonant',
+  Undetermined = 'Undetermined',
+  Unknown = 'Unknown'
+}
+
+export enum OCPP20IdTokenEnumType {
+  Central = 'Central',
+  eMAID = 'eMAID',
+  ISO14443 = 'ISO14443',
+  ISO15693 = 'ISO15693',
+  KeyCode = 'KeyCode',
+  Local = 'Local',
+  MacAddress = 'MacAddress',
+  NoAuthorization = 'NoAuthorization'
+}
+
+export enum OCPP20ReserveNowStatusEnumType {
+  Accepted = 'Accepted',
+  Faulted = 'Faulted',
+  Occupied = 'Occupied',
+  Rejected = 'Rejected',
+  Unavailable = 'Unavailable'
+}
+
 export type GenericStatusEnumType = GenericStatus
 
 export enum HashAlgorithmEnumType {
@@ -123,4 +167,15 @@ export interface StatusInfoType extends JsonObject {
 export interface EVSEType extends JsonObject {
   id: number
   connectorId?: string
+}
+
+export interface OCPP20AdditionalInfoType extends JsonObject {
+  additionalIdToken: string
+  type: string
+}
+
+export interface OCPP20IdTokenType extends JsonObject {
+  idToken: string
+  type: OCPP20IdTokenEnumType
+  additionalInfo?: OCPP20AdditionalInfoType[]
 }
