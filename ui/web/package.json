@@ -8,10 +8,10 @@
     "pnpm": ">=9.0.0"
   },
   "volta": {
-    "node": "22.5.1",
-    "pnpm": "9.6.0"
+    "node": "22.6.0",
+    "pnpm": "9.7.0"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -29,8 +29,8 @@
   "dependencies": {
     "finalhandler": "^1.2.0",
     "serve-static": "^1.15.0",
-    "vue": "^3.4.35",
-    "vue-router": "^4.4.2",
+    "vue": "^3.4.36",
+    "vue-router": "^4.4.3",
     "vue-toast-notification": "^3.1.2"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "typescript": "~5.5.4",
-    "vite": "^5.3.5",
+    "vite": "^5.4.0",
     "vitest": "^2.0.5"
   }
 }
